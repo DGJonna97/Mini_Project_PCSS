@@ -1,2 +1,2 @@
-# Mini_Project_PCSS
-This is our Git for the mini-project we are going to make in PCSS course.
+# P3 Implementation
+This is our Git for the implementation of our P3 Project
