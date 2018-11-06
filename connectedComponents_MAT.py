@@ -33,10 +33,10 @@ opening = cv.morphologyEx(thresh, cv.MORPH_CLOSE, kernel, iterations=1)
 
 blobs = Btector.detect(opening)
 
-_, labels = cv.connectedComponents(opening)
+_, labels = cv.connectedComponents(opening, connectivity=4)
 
 # Map component labels to hue val
-label_hue = np.uint8(179*labels/np.max(labels))
+label_hue = np.uint8(255*labels/np.max(labels))
 blank_ch = 255*np.ones_like(label_hue)
 labeled_img = cv.merge([label_hue, blank_ch, blank_ch])
 
