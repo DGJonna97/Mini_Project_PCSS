@@ -15,8 +15,24 @@ class BLOB:
     def getArea(self):
         return len(self.pixels)
 
-    def getRect():
-        return np.array([0,0,0,0])
+    def getRect(self):
+
+        x = 0
+        y = 0
+        w = 8000
+        h = 8000
+
+        for p in self.pixels:
+            if p[0] > x:
+                x = p[0]
+            if p[0] < w:
+                w = p[0]
+            if p[1] > y:
+                y = p[1]
+            if p[1] < h:
+                h = p[1]
+
+        return x, y, w-x, h-y
 
 def getBlobs(components):
 

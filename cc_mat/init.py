@@ -17,7 +17,11 @@ _, components = cv2.connectedComponents(image, connectivity=4)
 
 BLOBS = getBlobs(components)
 
-print(BLOBS[0].getArea())
+print(BLOBS[5].getArea())
 
-cv2.imshow("Test", image)
+x, y, w, h = BLOBS[5].getRect()
+
+cv2.rectangle(image, (x, y), (w+x, h+y), 255, 1)
+
+cv2.imshow("Image", image)
 cv2.waitKey(0)
