@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 class BLOB:
 
@@ -11,9 +12,17 @@ class BLOB:
     def addPixel(self, pixel):
         self.pixels.append(pixel)
 
-
     def getArea(self):
         return len(self.pixels)
+
+    def getCenterOfMass(self):
+
+        xArr, yArr = np.hsplit(np.array(self.pixels), 2)
+
+        xCom = (1/len(self.pixels)) * np.sum(xArr)
+        yCom = (1/len(self.pixels)) * np.sum(yArr)
+
+        return int(xCom), int(yCom) #Currently absolute center of mass, should be percentage of width/height
 
     def getRect(self):
 
@@ -33,6 +42,19 @@ class BLOB:
                 h = p[1]
 
         return x, y, w-x, h-y
+
+    def getCompactness(self):
+        _, _, w, h = self.getRect()
+        area = self.getArea()
+
+        return area / (w*h)
+
+    def getCircularity(self):
+        print("OI! getCircularity is not yet implemented!")
+        return 1 #Not yet implemented
+
+
+
 
 def getBlobs(components):
 
