@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 import math
 
 class BLOB:
@@ -20,25 +21,25 @@ class BLOB:
         self.pixels.append(pixel)
 
     def getBinaryImg(self):
-        if(self.binary == None):
+        if(self.binary is None):
             x, y, w, h = self.getRect()
 
-            self.binary = np.zeros((abs(w), abs(h)), np.bool_)
+            self.binary = np.zeros((abs(h)+3, abs(w)+3), np.uint8)
 
             for p in self.pixels:
-                self.binary[p[0]-x][p[1]-y] = 1
+                self.binary[p[1]-y-2][p[0]-x-2] = 255
 
         return self.binary
 
 
     def getArea(self):
-        if(self.area == None):
+        if(self.area is None):
             self.area = len(self.pixels)
 
         return self.area
 
     def getCenterOfMass(self):
-        if(self.centerOfMass == None):
+        if(self.centerOfMass is None):
             xArr, yArr = np.hsplit(np.array(self.pixels), 2)
 
             xCom = (1/len(self.pixels)) * np.sum(xArr)
@@ -49,7 +50,7 @@ class BLOB:
         return self.centerOfMass[0], self.centerOfMass[1]
 
     def getRect(self):
-        if(self.rect == None):
+        if(self.rect is None):
 
             x = 0
             y = 0
@@ -71,7 +72,7 @@ class BLOB:
         return self.rect[0], self.rect[1], self.rect[2], self.rect[3]
 
     def getCompactness(self):
-        if(self.compactness == None):
+        if(self.compactness is None):
             _, _, w, h = self.getRect()
             area = self.getArea()
 
@@ -80,41 +81,23 @@ class BLOB:
         return self.compactness
 
     def getPerimeter(self):
-        if(self.perimeter == None):
+        if(self.perimeter is None):
             binImg = self.getBinaryImg()
 
-            counter = 0
+            kernel = np.ones((3, 3), np.uint8)
 
-            for y in range(len(binImg)):
-                for x in range(len(binImg[y])):
-                    if(binImg[y][x] == 1):
+            binImg_small = cv2.erode(binImg, kernel, iterations=1)
 
-                        connectedSides = 0
+            edgeImg = np.subtract(binImg, binImg_small)
 
-                        if(y-1 > 0):
-                            if(binImg[y-1][x] == 1):
-                                connectedSides += 1
-                        if(x-1 > 0):
-                            if(binImg[y][x-1] == 1):
-                                connectedSides += 1
-                        if(y+1 < len(binImg)):
-                            if(binImg[y+1][x] == 1):
-                                connectedSides += 1
-                        if(x+1 < len(binImg[y])):
-                            if(binImg[y][x+1] == 1):
-                                connectedSides += 1
+            cv2.imshow("perimeter", edgeImg)
 
-
-
-                        if(connectedSides < 4):
-                            counter += 1
-
-            self.perimeter = counter
+            self.perimeter = np.sum(edgeImg) / 255
 
         return self.perimeter
 
     def getCircularity(self):
-        if(self.circularity == None):
+        if(self.circularity is None):
             self.circularity = self.getPerimeter() / (2 * math.sqrt(math.pi * self.getArea()))
 
         return self.circularity

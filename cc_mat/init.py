@@ -9,7 +9,7 @@ def segment(image):
 
     return cv2.morphologyEx(thresh, cv2.MORPH_OPEN, np.ones((3, 3),np.uint8), iterations=1)
 
-image = cv2.imread('mortenilna.png', 0)
+image = cv2.imread('circle.png', 0)
 
 image = segment(image)
 
@@ -22,11 +22,12 @@ image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
 for x in range(len(BLOBS)):
     blob = BLOBS[x]
 
-    if(blob.getArea() > 60 and blob.getCompactness() < 0.75 and blob.getCompactness() > 0.5):
+    if(blob.getArea() != 0):
 
         x, y, w, h = blob.getRect()
         xCom, yCom = blob.getCenterOfMass()
 
+        print(blob.getPerimeter())
         print(blob.getCircularity())
 
         cv2.rectangle(image, (x, y), (w+x, h+y), (0,255,0), 1)
