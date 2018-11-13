@@ -1,0 +1,10 @@
+Layer_1.png -:
+    Error: Too many/few blobs (0 BLOBs found)
+Layer_2.png -:
+    Error: Too many/few blobs (0 BLOBs found)
+Layer_4.png -:
+    Error: Too many/few blobs (0 BLOBs found)
+Layer_5.png -:
+    Error: Too many/few blobs (0 BLOBs found)
+Layer_6.png -:
+    Error: Too many/few blobs (0 BLOBs found)
