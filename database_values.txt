@@ -1,10 +1,40 @@
 Layer_1.png -:
-    Error: Too many/few blobs (0 BLOBs found)
+    area: 799
+    centerOfMass: (8, 23)
+    rect: (16, 46, -16, -46)
+    compactness: 1.0855978260869565
+    perimeter: 124.0
+    circularity: 1.23749474531
+
 Layer_2.png -:
-    Error: Too many/few blobs (0 BLOBs found)
+    area: 1200
+    centerOfMass: (11, 24)
+    rect: (23, 49, -23, -49)
+    compactness: 1.064773735581189
+    perimeter: 144.0
+    circularity: 1.17264602857
+
 Layer_4.png -:
-    Error: Too many/few blobs (0 BLOBs found)
+    area: 820
+    centerOfMass: (9, 20)
+    rect: (19, 40, -19, -40)
+    compactness: 1.0789473684210527
+    perimeter: 118.0
+    circularity: 1.16243893824
+
 Layer_5.png -:
-    Error: Too many/few blobs (0 BLOBs found)
+    area: 931
+    centerOfMass: (9, 24)
+    rect: (18, 48, -18, -48)
+    compactness: 1.0775462962962963
+    perimeter: 132.0
+    circularity: 1.22037740646
+
 Layer_6.png -:
-    Error: Too many/few blobs (0 BLOBs found)
+    area: 704
+    centerOfMass: (7, 21)
+    rect: (15, 43, -15, -43)
+    compactness: 1.0914728682170542
+    perimeter: 116.0
+    circularity: 1.23329430951
+

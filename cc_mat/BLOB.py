@@ -116,4 +116,4 @@ def getBlobs(components):
         for x in range(len(components[y])):
             componentArray[components[y][x]-1].addPixel([x, y])
 
-    return componentArray[0:-1]
+    return componentArray
