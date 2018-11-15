@@ -54,11 +54,12 @@ class BLOB:
             xCom = (1/len(self.pixels)) * np.sum(xArr)
             yCom = (1/len(self.pixels)) * np.sum(yArr)
 
+            #Sets center of mass x and y position
             self.centerOfMass = [int(xCom), int(yCom)]
 
         return self.centerOfMass[0], self.centerOfMass[1]
 
-    def getRect(self):
+    def getRect(self): #Essentially the bounding box
         if(self.rect is None):
 
             x = 0
@@ -66,6 +67,7 @@ class BLOB:
             w = 8000
             h = 8000
 
+            #Loops though the pixel array to find the largest / smallest x and y value
             for p in self.pixels:
                 if p[0] > x:
                     x = p[0]
@@ -78,6 +80,7 @@ class BLOB:
 
             self.rect = [x, y, w-x, h-y]
 
+        #returns array in the following order (x, y, w, h)
         return self.rect[0], self.rect[1], self.rect[2], self.rect[3]
 
     def getCompactness(self):
@@ -85,6 +88,7 @@ class BLOB:
             _, _, w, h = self.getRect()
             area = self.getArea()
 
+            #Based on the fomula in the IP book
             self.compactness = area / (w*h)
 
         return self.compactness
@@ -95,20 +99,27 @@ class BLOB:
 
             kernel = np.ones((3, 3), np.uint8)
 
+            #creates binary image with blob one pixels smaller then original
             binImg_small = cv2.erode(binImg, kernel, iterations=1)
 
+            #subtracts the small blob from the orig blob. (so now only the edge is visible)
             edgeImg = np.subtract(binImg, binImg_small)
 
+            #returns number of white pixels in the edge, by summing and dividing by 255
+            #Since all white pixels are 255
             self.perimeter = np.sum(edgeImg) / 255
 
         return self.perimeter
 
     def getCircularity(self):
         if(self.circularity is None):
+            #Based off the function in the IP book
             self.circularity = self.getPerimeter() / (2 * math.sqrt(math.pi * self.getArea()))
 
         return self.circularity
 
+#Function for getting blobs from the component Image
+#Returns an array of the BLOB object described above
 def getBlobs(components):
 
     componentArray = np.empty((np.max(components)), dtype=object)
