@@ -4,8 +4,9 @@ import math
 
 class BLOB:
 
+    #Python class constructor
     def __init__(self):
-        self.pixels = []
+        self.pixels = [] #Stored as an array of "points" aka. x,y coordinates
         self.binary = None
         self.area = None
         self.centerOfMass = None
@@ -20,14 +21,18 @@ class BLOB:
     def addPixel(self, pixel):
         self.pixels.append(pixel)
 
+    #Function for getting the pixels as a binary image (Instead of one list of pixels)
     def getBinaryImg(self):
+        #Only calculate the binary image if it has not yet been calculated
         if(self.binary is None):
             x, y, w, h = self.getRect()
 
+            #Initiating the empty image from w and h (+3 is to create some padding)
             self.binary = np.zeros((abs(h)+3, abs(w)+3), np.uint8)
 
+            #putting in white pixels in respective locations
             for p in self.pixels:
-                self.binary[p[1]-y-2][p[0]-x-2] = 255
+                self.binary[p[1]-y-2][p[0]-x-2] = 255 #I do -2 to add the padding mentioned earlier
 
         return self.binary
 
@@ -38,10 +43,14 @@ class BLOB:
 
         return self.area
 
+
     def getCenterOfMass(self):
         if(self.centerOfMass is None):
+
+            #This will split the array in two, one with xpositions and on with y positions
             xArr, yArr = np.hsplit(np.array(self.pixels), 2)
 
+            #Doing the summation based on the formula in the IP book
             xCom = (1/len(self.pixels)) * np.sum(xArr)
             yCom = (1/len(self.pixels)) * np.sum(yArr)
 
@@ -99,9 +108,6 @@ class BLOB:
             self.circularity = self.getPerimeter() / (2 * math.sqrt(math.pi * self.getArea()))
 
         return self.circularity
-
-
-
 
 def getBlobs(components):
 
