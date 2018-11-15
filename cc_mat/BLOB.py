@@ -90,8 +90,6 @@ class BLOB:
 
             edgeImg = np.subtract(binImg, binImg_small)
 
-            cv2.imshow("perimeter", edgeImg)
-
             self.perimeter = np.sum(edgeImg) / 255
 
         return self.perimeter
