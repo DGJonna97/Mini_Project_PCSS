@@ -15,11 +15,15 @@ def segment(image):
 
     return cv2.morphologyEx(thresh, cv2.MORPH_OPEN, np.ones((3, 3),np.uint8), iterations=1)
 
+#Getting the base directory for the project
 basedir = os.getcwd()
+#specifying which folder the image files are in and getting an array of files
 files = os.listdir(basedir + "/cc_mat/dataset")
 
+#initiating file to write to
 file = open(basedir + "/database_values.txt", "w")
 
+#for evey file in the folder /cc_mat/dataset try to load the image and find blobs
 for x in files:
     print(x + " -- " +os.path.abspath("cc_mat/dataset/" + x))
     image = cv2.imread(os.path.abspath("cc_mat/dataset/" + x), 0)
@@ -32,9 +36,11 @@ for x in files:
 
     BLOBS = getBlobs(components)
 
+    #If there are more or less then one BLOB write error to file
     if(len(BLOBS) != 1):
         file.write("    Error: Too many/few blobs (" + str(len(BLOBS)) + " BLOBs found)")
     else:
+    #If there is only one BLOB write it's featues to the file
         file.write("    area: "         + str(BLOBS[0].getArea())         + "\n")
         file.write("    centerOfMass: " + str(BLOBS[0].getCenterOfMass()) + "\n")
         file.write("    rect: "         + str(BLOBS[0].getRect())         + "\n")
@@ -44,4 +50,5 @@ for x in files:
 
     file.write("\n")
 
+#Close and save the text file
 file.close()
