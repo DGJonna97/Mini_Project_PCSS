@@ -28,7 +28,7 @@ class BLOB:
             x, y, w, h = self.getRect()
 
             #Initiating the empty image from w and h (+3 is to create some padding)
-            self.binary = np.zeros((abs(h)+3, abs(w)+3), np.uint8)
+            self.binary = np.zeros((h+3, w+3), np.uint8)
 
             #putting in white pixels in respective locations
             for p in self.pixels:
@@ -62,20 +62,20 @@ class BLOB:
     def getRect(self): #Essentially the bounding box
         if(self.rect is None):
 
-            x = 0
-            y = 0
-            w = 8000
-            h = 8000
+            x = 8000
+            y = 8000
+            w = 0
+            h = 0
 
             #Loops though the pixel array to find the largest / smallest x and y value
             for p in self.pixels:
-                if p[0] > x:
+                if p[0] < x:
                     x = p[0]
-                if p[0] < w:
+                if p[0] > w:
                     w = p[0]
-                if p[1] > y:
+                if p[1] < y:
                     y = p[1]
-                if p[1] < h:
+                if p[1] > h:
                     h = p[1]
 
             self.rect = [x, y, w-x, h-y]

@@ -10,7 +10,7 @@ def segment(image):
 
     return cv2.morphologyEx(thresh, cv2.MORPH_OPEN, np.ones((3, 3),np.uint8), iterations=1)
 
-image = cv2.imread('circle.png', 0)
+image = cv2.imread('img2.png', 0)
 
 image = segment(image)
 
@@ -41,5 +41,5 @@ for x in range(len(BLOBS)):
         #Drawing Center Of Mass
         cv2.rectangle(image, (xCom-1, yCom-1), (xCom+1, yCom+1), (255,0,0), 1)
 
-cv2.imshow("Image", image)
+cv2.imshow("final", image)
 cv2.waitKey(0)

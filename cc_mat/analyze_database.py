@@ -6,11 +6,12 @@ from BLOB import BLOB
 from BLOB import getBlobs
 
 def segment(image):
-    image = cv2.equalizeHist(image)
-    _, thresh = cv2.threshold(image, 250, 255, cv2.THRESH_BINARY)
 
-    cv2.imshow("org", image)
-    cv2.imshow("img", thresh)
+    image = cv2.medianBlur(image, 3)
+
+    _, thresh = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_TRIANGLE)
+
+    cv2.imshow("thresh", thresh)
     cv2.waitKey(0)
 
     return cv2.morphologyEx(thresh, cv2.MORPH_OPEN, np.ones((3, 3),np.uint8), iterations=1)
@@ -38,7 +39,7 @@ for x in files:
 
     #If there are more or less then one BLOB write error to file
     if(len(BLOBS) != 1):
-        file.write("    Error: Too many/few blobs (" + str(len(BLOBS)) + " BLOBs found)")
+        file.write("    Error: Too many/few blobs (" + str(len(BLOBS)) + " BLOBs found)" + "\n")
     else:
     #If there is only one BLOB write it's featues to the file
         file.write("    area: "         + str(BLOBS[0].getArea())         + "\n")

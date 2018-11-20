@@ -1,16 +1,259 @@
-mathias1.jpg -:
-    Error: Too many/few blobs (2 BLOBs found)
+laura1.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+laura2.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+laura3.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+laura4.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+laura5.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+laura6.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+laura7.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+laura8.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+laura9.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+lauura10.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias10.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias11.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias12.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias13.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias14.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias16.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias17.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias18.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
 mathias2.jpg -:
     area: 6912
     centerOfMass: (47, 35)
-    rect: (95, 71, -95, -71)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias20.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias22.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias23.jpg -:
+    area: 6912
+    centerOfMass: (35, 47)
+    rect: (0, 0, 71, 95)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias24.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
     compactness: 1.024759080800593
     perimeter: 332.0
     circularity: 1.12650023578
 
 mathias3.jpg -:
-    Error: Too many/few blobs (4 BLOBs found)
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
 mathias5.jpg -:
-    Error: Too many/few blobs (2 BLOBs found)
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
 mathias6.jpg -:
-    Error: Too many/few blobs (3 BLOBs found)
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias7.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias8.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathias9.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathiasoccluded1.jpg -:
+    Error: Too many/few blobs (2 BLOBs found)
+
+mathiasoccluded2.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathiasoccluded3.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
+mathiasoccluded4.jpg -:
+    area: 6912
+    centerOfMass: (47, 35)
+    rect: (0, 0, 95, 71)
+    compactness: 1.024759080800593
+    perimeter: 332.0
+    circularity: 1.12650023578
+
