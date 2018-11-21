@@ -32,9 +32,9 @@ for x in range(len(BLOBS)):
 
         x, y, w, h = blob.getRect()
         xCom, yCom = blob.getCenterOfMass()
-
-        print(blob.getPerimeter())
-        print(blob.getCircularity())
+        
+        xCom = int((xCom * w) + x)
+        yCom = int((yCom * h) + y)
 
         #Drawing bounding box
         cv2.rectangle(image, (x, y), (w+x, h+y), (0,255,0), 1)

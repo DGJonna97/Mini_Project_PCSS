@@ -11,9 +11,6 @@ def segment(image):
 
     _, thresh = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_TRIANGLE)
 
-    cv2.imshow("thresh", thresh)
-    cv2.waitKey(0)
-
     return cv2.morphologyEx(thresh, cv2.MORPH_OPEN, np.ones((3, 3),np.uint8), iterations=1)
 
 #Getting the base directory for the project

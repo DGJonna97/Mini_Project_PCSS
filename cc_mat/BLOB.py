@@ -50,12 +50,14 @@ class BLOB:
             #This will split the array in two, one with xpositions and on with y positions
             xArr, yArr = np.hsplit(np.array(self.pixels), 2)
 
+            x, y, w, h = self.getRect()
+
             #Doing the summation based on the formula in the IP book
-            xCom = (1/len(self.pixels)) * np.sum(xArr)
-            yCom = (1/len(self.pixels)) * np.sum(yArr)
+            xCom = ((1/len(self.pixels)) * np.sum(xArr) - x) / w
+            yCom = ((1/len(self.pixels)) * np.sum(yArr) - y) / h
 
             #Sets center of mass x and y position
-            self.centerOfMass = [int(xCom), int(yCom)]
+            self.centerOfMass = [xCom, yCom]
 
         return self.centerOfMass[0], self.centerOfMass[1]
 
