@@ -28,7 +28,7 @@ image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
 for x in range(len(BLOBS)):
     blob = BLOBS[x]
 
-    if(blob.getArea() != 0):
+    if(blob.getArea() > 500):
 
         x, y, w, h = blob.getRect()
         xCom, yCom = blob.getCenterOfMass()

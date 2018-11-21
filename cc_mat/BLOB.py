@@ -32,7 +32,7 @@ class BLOB:
 
             #putting in white pixels in respective locations
             for p in self.pixels:
-                self.binary[p[1]-y-2][p[0]-x-2] = 255 #I do -2 to add the padding mentioned earlier
+                self.binary[p[1]-y+1][p[0]-x+1] = 255 #I do -2 to add the padding mentioned earlier
 
         return self.binary
 
@@ -97,17 +97,14 @@ class BLOB:
         if(self.perimeter is None):
             binImg = self.getBinaryImg()
 
-            kernel = np.ones((3, 3), np.uint8)
+            image,contours,_ = cv2.findContours(binImg, 1, 2)
 
-            #creates binary image with blob one pixels smaller then original
-            binImg_small = cv2.erode(binImg, kernel, iterations=1)
+            perimeter = 0;
 
-            #subtracts the small blob from the orig blob. (so now only the edge is visible)
-            edgeImg = np.subtract(binImg, binImg_small)
+            for x in contours:
+                    perimeter += cv2.arcLength(contours[0], True)
 
-            #returns number of white pixels in the edge, by summing and dividing by 255
-            #Since all white pixels are 255
-            self.perimeter = np.sum(edgeImg) / 255
+            self.perimeter = perimeter
 
         return self.perimeter
 

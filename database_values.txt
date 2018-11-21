@@ -3,232 +3,232 @@ laura1.jpg -:
     centerOfMass: (47, 23)
     rect: (22, 10, 50, 28)
     compactness: 0.655
-    perimeter: 180.0
-    circularity: 1.67680633183
+    perimeter: 157.63960897922516
+    circularity: 1.4685060804654555
 
 laura2.jpg -:
     area: 820
     centerOfMass: (51, 26)
     rect: (26, 12, 47, 27)
     compactness: 0.6461780929866037
-    perimeter: 143.0
-    circularity: 1.4087183743
+    perimeter: 128.56854140758514
+    circularity: 1.2665515149532336
 
 laura3.jpg -:
     area: 1206
     centerOfMass: (46, 36)
     rect: (13, 15, 67, 46)
     compactness: 0.391304347826087
-    perimeter: 309.0
-    circularity: 2.51003567143
+    perimeter: 255.76449978351593
+    circularity: 2.077598763570178
 
 laura4.jpg -:
     area: 1223
     centerOfMass: (45, 44)
     rect: (9, 31, 73, 23)
     compactness: 0.7284097677188803
-    perimeter: 198.0
-    circularity: 1.59715486881
+    perimeter: 181.15432786941528
+    circularity: 1.4612702866816347
 
 laura5.jpg -:
     area: 1226
     centerOfMass: (47, 34)
     rect: (15, 23, 70, 28)
     compactness: 0.6255102040816326
-    perimeter: 207.0
-    circularity: 1.66770863852
+    perimeter: 182.61017060279846
+    circularity: 1.4712104299321727
 
 laura6.jpg -:
     area: 1172
     centerOfMass: (36, 43)
     rect: (10, 27, 62, 44)
     compactness: 0.42961876832844575
-    perimeter: 271.0
-    circularity: 2.23306082656
+    perimeter: 232.40916049480438
+    circularity: 1.9150693433027453
 
 laura7.jpg -:
     area: 1096
     centerOfMass: (42, 34)
     rect: (17, 16, 49, 47)
     compactness: 0.4759009986973513
-    perimeter: 234.0
-    circularity: 1.99391044465
+    perimeter: 199.3380936384201
+    circularity: 1.6985568671896079
 
 laura8.jpg -:
     area: 1090
     centerOfMass: (43, 33)
     rect: (23, 14, 48, 34)
     compactness: 0.6678921568627451
-    perimeter: 190.0
-    circularity: 1.62343692582
+    perimeter: 42.62741661071777
+    circularity: 0.36422590620095174
 
 laura9.jpg -:
     area: 812
     centerOfMass: (49, 36)
     rect: (25, 24, 44, 30)
     compactness: 0.6151515151515151
-    perimeter: 194.0
-    circularity: 1.9205197749
+    perimeter: 30.627416610717773
+    circularity: 0.3031987590467328
 
 lauura10.jpg -:
     area: 681
     centerOfMass: (45, 44)
     rect: (19, 28, 43, 28)
     compactness: 0.5656146179401993
-    perimeter: 209.0
-    circularity: 2.25926824489
+    perimeter: 16.97056245803833
+    circularity: 0.18345001368081107
 
 mathias10.jpg -:
     area: 1754
     centerOfMass: (43, 34)
     rect: (6, 11, 85, 48)
     compactness: 0.42990196078431375
-    perimeter: 388.0
-    circularity: 2.61343678151
+    perimeter: 343.76449942588806
+    circularity: 2.3154814097352805
 
 mathias11.jpg -:
     area: 1009
     centerOfMass: (52, 35)
     rect: (29, 22, 48, 29)
     compactness: 0.7248563218390804
-    perimeter: 182.0
-    circularity: 1.61629590589
+    perimeter: 27.798989295959473
+    circularity: 0.24687578344437563
 
 mathias12.jpg -:
     area: 1031
     centerOfMass: (50, 34)
     rect: (28, 15, 47, 34)
     compactness: 0.6451814768460575
-    perimeter: 174.0
-    circularity: 1.52867436804
+    perimeter: 148.71067667007446
+    circularity: 1.3064954004548606
 
 mathias13.jpg -:
     area: 922
     centerOfMass: (50, 38)
     rect: (26, 26, 47, 26)
     compactness: 0.7545008183306056
-    perimeter: 143.0
-    circularity: 1.32851249962
+    perimeter: 127.49747347831726
+    circularity: 1.1844894208823136
 
 mathias14.jpg -:
     area: 637
     centerOfMass: (44, 36)
     rect: (28, 22, 38, 24)
     compactness: 0.6984649122807017
-    perimeter: 127.0
-    circularity: 1.41947932976
+    perimeter: 108.9116872549057
+    circularity: 1.2173062112379411
 
 mathias16.jpg -:
     area: 968
     centerOfMass: (43, 49)
     rect: (10, 31, 72, 31)
     compactness: 0.4336917562724014
-    perimeter: 225.0
-    circularity: 2.04004575205
+    perimeter: 200.81118190288544
+    circularity: 1.8207288826919097
 
 mathias17.jpg -:
     area: 921
     centerOfMass: (48, 48)
     rect: (31, 28, 57, 35)
     compactness: 0.4616541353383459
-    perimeter: 191.0
-    circularity: 1.77540983003
+    perimeter: 184.32590091228485
+    circularity: 1.7133718136590754
 
 mathias18.jpg -:
     area: 751
     centerOfMass: (44, 42)
     rect: (31, 24, 30, 33)
     compactness: 0.7585858585858586
-    perimeter: 141.0
-    circularity: 1.45142370613
+    perimeter: 27.798989295959473
+    circularity: 0.286156823195195
 
 mathias2.jpg -:
     area: 1584
     centerOfMass: (66, 38)
     rect: (49, 1, 37, 70)
     compactness: 0.6115830115830115
-    perimeter: 248.0
-    circularity: 1.75779878597
+    perimeter: 219.78174424171448
+    circularity: 1.5577906580875382
 
 mathias20.jpg -:
     area: 810
     centerOfMass: (41, 38)
     rect: (29, 20, 27, 36)
     compactness: 0.8333333333333334
-    perimeter: 123.0
-    circularity: 1.21915147937
+    perimeter: 116.76955187320709
+    circularity: 1.157396519607449
 
 mathias22.jpg -:
     area: 699
     centerOfMass: (48, 34)
     rect: (37, 8, 25, 51)
     compactness: 0.548235294117647
-    perimeter: 189.0
-    circularity: 2.01659313446
+    perimeter: 168.2253954410553
+    circularity: 1.7949321560215126
 
 mathias23.jpg -:
     area: 1261
     centerOfMass: (29, 43)
     rect: (11, 8, 40, 81)
     compactness: 0.3891975308641975
-    perimeter: 260.0
-    circularity: 2.06543186378
+    perimeter: 229.5391035079956
+    circularity: 1.8234514552626326
 
 mathias24.jpg -:
     area: 691
     centerOfMass: (48, 43)
     rect: (12, 29, 76, 25)
     compactness: 0.3636842105263158
-    perimeter: 222.0
-    circularity: 2.38236894218
+    perimeter: 188.85281205177307
+    circularity: 2.026653486825486
 
 mathias3.jpg -:
     area: 1094
     centerOfMass: (39, 35)
     rect: (13, 16, 56, 34)
     compactness: 0.5745798319327731
-    perimeter: 241.0
-    circularity: 2.05543359025
+    perimeter: 51.79898953437805
+    circularity: 0.44178167232366317
 
 mathias5.jpg -:
     area: 1108
     centerOfMass: (42, 35)
     rect: (22, 5, 38, 66)
     compactness: 0.44178628389154706
-    perimeter: 212.0
-    circularity: 1.79663993477
+    perimeter: 180.61017096042633
+    circularity: 1.5306200272292205
 
 mathias6.jpg -:
     area: 1229
     centerOfMass: (43, 37)
     rect: (2, 27, 85, 20)
     compactness: 0.7229411764705882
-    perimeter: 223.0
-    circularity: 1.79441953927
+    perimeter: 203.63960886001587
+    circularity: 1.6386318076593902
 
 mathias7.jpg -:
     area: 1795
     centerOfMass: (43, 44)
     rect: (0, 23, 85, 48)
     compactness: 0.43995098039215685
-    perimeter: 393.0
-    circularity: 2.61670878172
+    perimeter: 335.66399359703064
+    circularity: 2.2349489052270353
 
 mathias8.jpg -:
     area: 1511
     centerOfMass: (56, 33)
     rect: (21, 8, 71, 59)
     compactness: 0.3607066125566961
-    perimeter: 408.0
-    circularity: 2.96089494755
+    perimeter: 344.2914090156555
+    circularity: 2.498555621173803
 
 mathias9.jpg -:
     area: 1423
     centerOfMass: (53, 35)
     rect: (8, 14, 87, 53)
     compactness: 0.30860984602038605
-    perimeter: 376.0
-    circularity: 2.81177433737
+    perimeter: 331.2203425168991
+    circularity: 2.47690654017128
 
 mathiasoccluded1.jpg -:
     Error: Too many/few blobs (2 BLOBs found)
@@ -238,22 +238,22 @@ mathiasoccluded2.jpg -:
     centerOfMass: (47, 41)
     rect: (18, 16, 65, 53)
     compactness: 0.41828737300435415
-    perimeter: 368.0
-    circularity: 2.73470759165
+    perimeter: 303.4629828929901
+    circularity: 2.255115551907569
 
 mathiasoccluded3.jpg -:
     area: 1278
     centerOfMass: (45, 40)
     rect: (12, 12, 68, 56)
     compactness: 0.33560924369747897
-    perimeter: 358.0
-    circularity: 2.82496237365
+    perimeter: 299.6639938354492
+    circularity: 2.364635495314119
 
 mathiasoccluded4.jpg -:
     area: 654
     centerOfMass: (51, 39)
     rect: (33, 21, 39, 38)
     compactness: 0.44129554655870445
-    perimeter: 198.0
-    circularity: 2.18409429317
+    perimeter: 168.36753046512604
+    circularity: 1.8572250628526787
 
