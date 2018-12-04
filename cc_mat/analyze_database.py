@@ -16,15 +16,15 @@ def segment(image):
 #Getting the base directory for the project
 basedir = os.getcwd()
 #specifying which folder the image files are in and getting an array of files
-files = os.listdir(basedir + "/cc_mat/dataset")
+files = os.listdir(basedir + "/cc_mat/trainingset")
 
 #initiating file to write to
 file = open(basedir + "/database_values.txt", "w")
 
-#for evey file in the folder /cc_mat/dataset try to load the image and find blobs
+#for evey file in the folder /cc_mat/trainingset try to load the image and find blobs
 for x in files:
-    print(x + " -- " +os.path.abspath("cc_mat/dataset/" + x))
-    image = cv2.imread(os.path.abspath("cc_mat/dataset/" + x), 0)
+    print(x + " -- " +os.path.abspath("cc_mat/trainingset/" + x))
+    image = cv2.imread(os.path.abspath("cc_mat/trainingset/" + x), 0)
 
     file.write(x + " -:" + "\n")
 
