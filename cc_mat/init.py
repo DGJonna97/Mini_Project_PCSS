@@ -5,13 +5,19 @@ import numpy as np
 from BLOB import BLOB
 from BLOB import getBlobs
 
-path = "C:/Evaluation"
+path = "C:/Evaluation/segment"
 
 #Function for segmenting the image. Following simlifyed method by Jonathan in watershed
 def segment(image):
     _, thresh = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_TRIANGLE)
 
     return cv2.morphologyEx(thresh, cv2.MORPH_OPEN, np.ones((3, 3),np.uint8), iterations=1)
+
+def withinRange(var, low, high):
+    if(var < high and var > low):
+        return True
+    else:
+        return False
 
 def labelBlobs(imagePath):
     image = cv2.imread(imagePath, 0)
@@ -32,7 +38,7 @@ def labelBlobs(imagePath):
     for x in range(len(BLOBS)):
         blob = BLOBS[x]
 
-        if(blob.getArea() > 120):
+        if(withinRange(blob.getCompactness(), 0.4298, 0.6614)):
 
             x, y, w, h = blob.getRect()
             xCom, yCom = blob.getCenterOfMass()
@@ -54,6 +60,7 @@ files = os.listdir(basedir + "/cc_mat/testset")
 
 #for evey file in the folder /cc_mat/trainingset try to load the image and find blobs
 for x in files:
-    image = labelBlobs(os.path.abspath("cc_mat/testset/" + x))
+    im = cv2.imread(os.path.abspath("cc_mat/testset/" + x), 0)
+    image = segment(im)
 
     cv2.imwrite(os.path.join(path, x), image)
