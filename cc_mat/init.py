@@ -5,7 +5,7 @@ import numpy as np
 from BLOB import BLOB
 from BLOB import getBlobs
 
-path = "C:/Evaluation/segment"
+path = "C:/Evaluation"
 
 #Function for segmenting the image. Following simlifyed method by Jonathan in watershed
 def segment(image):
@@ -60,7 +60,6 @@ files = os.listdir(basedir + "/cc_mat/testset")
 
 #for evey file in the folder /cc_mat/trainingset try to load the image and find blobs
 for x in files:
-    im = cv2.imread(os.path.abspath("cc_mat/testset/" + x), 0)
-    image = segment(im)
+    image = labelBlobs(os.path.abspath("cc_mat/testset/" + x))
 
     cv2.imwrite(os.path.join(path, x), image)
