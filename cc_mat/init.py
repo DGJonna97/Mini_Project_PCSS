@@ -5,7 +5,7 @@ import numpy as np
 from BLOB import BLOB
 from BLOB import getBlobs
 
-path = "C:/Evaluation"
+path = "Evaluation/"
 
 #Function for segmenting the image. Following simlifyed method by Jonathan in watershed
 def segment(image):
