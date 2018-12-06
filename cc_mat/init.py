@@ -7,7 +7,7 @@ from BLOB import getBlobs
 
 path = "Evaluation/"
 
-#Function for segmenting the image. Following simlifyed method by Jonathan in watershed
+#Function for segmenting the image. Following simlifyed method by Jonatan in watershed
 def segment(image):
     _, thresh = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_TRIANGLE)
 
