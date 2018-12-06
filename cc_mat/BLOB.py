@@ -83,7 +83,7 @@ class BLOB:
             self.rect = [x, y, w-x, h-y]
 
         #returns array in the following order (x, y, w, h)
-        return self.rect[0], self.rect[1], self.rect[2], self.rect[3]
+        return self.rect[0], self.rect[1], self.rect[2]+1, self.rect[3]+1
 
     def getCompactness(self):
         if(self.compactness is None):

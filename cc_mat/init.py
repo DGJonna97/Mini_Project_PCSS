@@ -1,5 +1,6 @@
 import cv2
 import os
+import math
 import numpy as np
 
 from BLOB import BLOB
@@ -9,15 +10,37 @@ path = "Evaluation/"
 
 #Function for segmenting the image. Following simlifyed method by Jonatan in watershed
 def segment(image):
-    _, thresh = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_TRIANGLE)
 
-    return cv2.morphologyEx(thresh, cv2.MORPH_OPEN, np.ones((3, 3),np.uint8), iterations=1)
+    image = cv2.medianBlur(image, 5)
+
+    #Exponential mapping
+    k = 1.05
+
+    c = 255 / (math.pow(k, np.max(image)) - 1)
+
+    thresh = c * (np.power(k, image) - 1)
+
+    _, thresh = cv2.threshold(thresh.astype(np.uint8), 1, 256, cv2.THRESH_BINARY)
+
+    return cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, np.ones((3, 3),np.uint8), iterations=2)
 
 def withinRange(var, low, high):
     if(var < high and var > low):
         return True
     else:
         return False
+
+def getDistance(vec1, vec2):
+    if(len(vec1) != len(vec2)):
+        print("Vector sizes do not match")
+        return -1
+
+    sum = 0
+
+    for x in range(len(vec1)):
+        sum + = math.pow(vec2 - vec1, 2)
+
+    return math.sqrt(sum)
 
 def labelBlobs(imagePath):
     image = cv2.imread(imagePath, 0)
@@ -51,7 +74,7 @@ def labelBlobs(imagePath):
             #Drawing Center Of Mass
             cv2.rectangle(final, (xCom-1, yCom-1), (xCom+1, yCom+1), (255,0,0), 1)
 
-    return final
+    return final, seg
 
 #Getting the base directory for the project
 basedir = os.getcwd()
@@ -60,6 +83,6 @@ files = os.listdir(basedir + "/cc_mat/testset")
 
 #for evey file in the folder /cc_mat/trainingset try to load the image and find blobs
 for x in files:
-    image = labelBlobs(os.path.abspath("cc_mat/testset/" + x))
+    image, seg = labelBlobs(os.path.abspath("cc_mat/testset/" + x))
 
-    cv2.imwrite(os.path.join(path, x), image)
+    cv2.imwrite(os.path.join(path, x), seg)
