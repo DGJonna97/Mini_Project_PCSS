@@ -38,6 +38,9 @@ def labelBlobs(imagePath):
     for x in range(len(BLOBS)):
         blob = BLOBS[x]
 
+        # The average of compactness is 0.4785
+        # The average of circularity is 2.6173
+        # The average of centerOfMass is (0.5073, 0.4675)
         if(withinRange(blob.getCompactness(), 0.4298, 0.6614)):
 
             x, y, w, h = blob.getRect()
