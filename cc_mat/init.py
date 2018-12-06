@@ -38,7 +38,7 @@ def getDistance(vec1, vec2):
     sum = 0
 
     for x in range(len(vec1)):
-        sum + = math.pow(vec2 - vec1, 2)
+        sum += math.pow(vec2[x] - vec1[x], 2)
 
     return math.sqrt(sum)
 
@@ -64,7 +64,10 @@ def labelBlobs(imagePath):
         # The average of compactness is 0.4785
         # The average of circularity is 2.6173
         # The average of centerOfMass is (0.5073, 0.4675)
-        if(withinRange(blob.getCompactness(), 0.4298, 0.6614)):
+
+        distance = getDistance([blob.getCompactness(), blob.getCircularity(), blob.getCenterOfMass()[1]], [0.4785, 2.6173, 0.4675])
+
+        if(distance < 1.3):
 
             x, y, w, h = blob.getRect()
             xCom, yCom = blob.getCenterOfMass()
@@ -88,4 +91,4 @@ files = os.listdir(basedir + "/cc_mat/testset")
 for x in files:
     image, seg = labelBlobs(os.path.abspath("cc_mat/testset/" + x))
 
-    cv2.imwrite(os.path.join(path, x), seg)
+    cv2.imwrite(os.path.join(path, x), image)
