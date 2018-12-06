@@ -29,8 +29,6 @@ for x in files:
     file.write(x + " -:" + "\n")
 
     image = segment(image)
-    cv2.imshow("Pictures", image)
-    cv2.waitKey(0)
 
     _, components = cv2.connectedComponents(image, connectivity=4)
 

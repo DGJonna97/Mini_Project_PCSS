@@ -1,25 +1,40 @@
-tpose_0.png -:
-    Error: Too many/few blobs (2 BLOBs found)
+tpose_0_edited.png -:
+    area: 18315
+    centerOfMass: (0.4873782873782874, 0.46518136318136316)
+    rect: (92, 46, 123, 300)
+    compactness: 0.49634146341463414
+    perimeter: 1401.192992925644
+    circularity: 2.920717570619227
 
-tpose_1.png -:
-    area: 15054
-    centerOfMass: (0.4652729726886554, 0.4703233550956969)
-    rect: (82, 85, 269, 113)
-    compactness: 0.49524624140540185
-    perimeter: 1119.2102389335632
-    circularity: 2.573242921108545
+tpose_1_edited.png -:
+    area: 16491
+    centerOfMass: (0.5251201577672141, 0.4715804953210529)
+    rect: (88, 81, 115, 271)
+    compactness: 0.5291512915129152
+    perimeter: 1043.1269775629044
+    circularity: 2.291441369295619
 
-tpose_2.png -:
-    Error: Too many/few blobs (3 BLOBs found)
+tpose_2_edited.png -:
+    area: 18593
+    centerOfMass: (0.5198435608795583, 0.4798051328466001)
+    rect: (94, 37, 113, 297)
+    compactness: 0.5540061380769346
+    perimeter: 1235.2518681287766
+    circularity: 2.555499808267431
 
 tpose_3.png -:
-    area: 14063
-    centerOfMass: (0.45338045217186873, 0.4868968022278128)
-    rect: (31, 77, 271, 148)
-    compactness: 0.3506283035803331
-    perimeter: 1196.648836016655
-    circularity: 2.846576123856673
+    area: 14615
+    centerOfMass: (0.511920832909543, 0.45559920749794164)
+    rect: (62, 30, 148, 273)
+    compactness: 0.3617216117216117
+    perimeter: 1206.7909716367722
+    circularity: 2.815967969481723
 
-tpose_4.png -:
-    Error: Too many/few blobs (4 BLOBs found)
+tpose_4_edited.png -:
+    area: 21442
+    centerOfMass: (0.49230076688173957, 0.4653771546102295)
+    rect: (74, 20, 161, 295)
+    compactness: 0.45145804821560165
+    perimeter: 1299.2762532234192
+    circularity: 2.5030177137607366
 
