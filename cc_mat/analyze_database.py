@@ -16,19 +16,21 @@ def segment(image):
 #Getting the base directory for the project
 basedir = os.getcwd()
 #specifying which folder the image files are in and getting an array of files
-files = os.listdir(basedir + "/cc_mat/trainingset")
+files = os.listdir(basedir + "/cc_mat/trainingsetV2")
 
 #initiating file to write to
 file = open(basedir + "/database_values.txt", "w")
 
 #for evey file in the folder /cc_mat/trainingset try to load the image and find blobs
 for x in files:
-    print(x + " -- " +os.path.abspath("cc_mat/trainingset/" + x))
-    image = cv2.imread(os.path.abspath("cc_mat/trainingset/" + x), 0)
+    print(x + " -- " +os.path.abspath("cc_mat/trainingsetV2/" + x))
+    image = cv2.imread(os.path.abspath("cc_mat/trainingsetV2/" + x), 0)
 
     file.write(x + " -:" + "\n")
 
     image = segment(image)
+    cv2.imshow("Pictures", image)
+    cv2.waitKey(0)
 
     _, components = cv2.connectedComponents(image, connectivity=4)
 
