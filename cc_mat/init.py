@@ -67,7 +67,7 @@ def labelBlobs(imagePath):
 
         distance = getDistance([blob.getCompactness(), blob.getCircularity(), blob.getCenterOfMass()[1]], [0.4785, 2.6173, 0.4675])
 
-        if(distance < 1.3):
+        if(distance < 1.5 and blob.getArea() > 100):
 
             x, y, w, h = blob.getRect()
             xCom, yCom = blob.getCenterOfMass()
